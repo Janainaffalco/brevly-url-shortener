@@ -1,11 +1,13 @@
 import { S3Client } from "@aws-sdk/client-s3";
 
-export const s3 = new S3Client({
+const s3 = new S3Client({
   region: "auto",
-  endpoint: process.env.S3_ENDPOINT,
+  endpoint: process.env.CLOUDFLARE_ENDPOINT,
   credentials: {
-    accessKeyId: process.env.S3_ACCESS_KEY,
-    secretAccessKey: process.env.S3_SECRET_KEY,
+    accessKeyId: process.env.CLOUDFLARE_ACCESS_KEY,
+    secretAccessKey: process.env.CLOUDFLARE_SECRET_KEY,
   },
   forcePathStyle: true,
 });
+
+export { s3 };

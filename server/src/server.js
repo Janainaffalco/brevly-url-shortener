@@ -125,14 +125,14 @@ app.get("/links/export", async (req, res) => {
 
     await s3.send(
       new PutObjectCommand({
-        Bucket: process.env.S3_BUCKET,
+        Bucket: process.env.CLOUDFLARE_BUCKET,
         Key: fileName,
         Body: csv,
         ContentType: "text/csv",
       })
     );
 
-    const publicUrl = `${process.env.S3_PUBLIC_URL}/${fileName}`;
+    const publicUrl = `${process.env.CLOUDFLARE_PUBLIC_URL}/${fileName}`;
 
     return res.json({
       url: publicUrl,

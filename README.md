@@ -1,3 +1,22 @@
+## ✅ Melhorias implementadas
+
+Com base no feedback recebido, foram realizadas as seguintes melhorias no projeto:
+
+* ✔ Ajuste das variáveis de ambiente para padrão Cloudflare (CLOUDFLARE_*)
+* ✔ Criação do arquivo `.env.example`
+* ✔ Remoção de valores hardcoded (porta e conexão com banco)
+* ✔ Implementação de validação robusta de URLs (http/https + estrutura válida)
+* ✔ Tratamento de erros no frontend para melhor experiência do usuário
+* ✔ Implementação de responsividade para dispositivos móveis
+* ✔ Ajustes visuais para melhor aderência ao layout proposto
+* ✔ Organização e limpeza do repositório
+
+### 🔧 Melhorias futuras
+
+* Implementação de exportação CSV com streams para melhor performance
+* Migração do backend para TypeScript + Fastify + Drizzle ORM conforme stack proposta
+
+
 # Brev.ly - Encurtador de URLs
 
 Projeto desenvolvido como desafio prático para criação de um encurtador de URLs com backend e frontend integrados.

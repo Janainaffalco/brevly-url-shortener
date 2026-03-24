@@ -15,6 +15,12 @@ function LinkForm ({ setLinks }) {
       shortUrl,
     });
 
+    //  valida erro
+    if (data.error) {
+      alert(data.error);
+      return;
+    }
+
     setLinks((prevLinks) => [data, ...prevLinks]);
 
     setOriginalUrl("");
